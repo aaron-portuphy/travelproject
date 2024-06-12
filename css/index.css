@@ -99,33 +99,98 @@ body {
     width: 100%;
     text-shadow: 0px 11px 51px rgba(0, 0, 0, 0.35);
 }
-#find-adventure{
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        background: transparent;
-        min-height: 400px;
+#find-adventure {
+    position: relative; /* Ensure find-adventure is relative for positioning its children */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: transparent;
+    min-height: 400px;
 }
-#find-image{
+
+#find-image {
     width: 100%;
     height: 50vh;
 }
-#adventure-text{
-    position: absolute;
-    top: 650px; /* Adjust top position to center vertically */
+
+#adventure-text {
+    position: absolute; /* Position absolute to place it on top of the image */
+    top: 10%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Centering trick */
+    transform: translate(-50%, -50%); /* Centering trick */
     text-align: center;
     font-size: 30px;
     color: #FFFFFF;
-    width: 100%;
     z-index: 10; /* Ensure text is above the image */
 }
 
-
-
+/* Optional: add a text-shadow for better readability */
+#adventure-text {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.form-container{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 100%;
+    margin-top: 36px;
+    z-index: 20;
+}
+#find-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.find-item{
+    display: flex;
+    flex-direction: column;
+}
+.find-item:first-child{
+    width: 31.413%;
+}
+.find-item:nth-child(2){
+    width: 31.413%;
+}
+.find-item div {
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 7px;
+}
+.find-input {
+    width: 100%;
+    height: 56px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 52px;
+    color: #FFFFFF;
+    border: solid 2px rgba(255, 255, 255, 0.5);
+    background: transparent;
+}
+dropdown-item-select {
+    background-image: url(../images/down.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: #939393 !important;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
