@@ -43,10 +43,9 @@ body {
     z-index: 2; /* Ensure the nav bar is above the overlay */
 }
 
-#logo {
-    width: 300px; /* Adjust the logo size as needed */
+#logo{
+    width: 10vw;
 }
-
 #navigation ul {
     list-style: none;
     display: flex;
@@ -100,14 +99,14 @@ body {
     text-shadow: 0px 11px 51px rgba(0, 0, 0, 0.35);
 }
 #find-adventure {
-    position: relative; /* Ensure find-adventure is relative for positioning its children */
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 50vh;
     top: 0;
     left: 0;
     z-index: 0;
     background: transparent;
-    min-height: 400px;
+    min-height: 50vh;
 }
 
 #find-image {
@@ -123,12 +122,45 @@ body {
     text-align: center;
     font-size: 30px;
     color: #FFFFFF;
-    z-index: 10; /* Ensure text is above the image */
+    z-index: 10; 
 }
 
-/* Optional: add a text-shadow for better readability */
 #adventure-text {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.popular {
+    width: 100%;
+    background: #FFFFFF;
+}
+.popular-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.section-title {
+    padding-top: 111px;
+    line-height: 1.1;
+    text-align: center;
+}
+.section-title h2 {
+    font-weight: 300;
+    color: #131a2f;
+}
+.section-title div {
+    font-size: 16px;
+    font-weight: 400;
+    color: #7d8293;
+    text-transform: uppercase;
+    margin-top: 19px;
 }
 .form-container{
     display: flex;
@@ -223,9 +255,9 @@ select, textarea {
     background: #080d1d;
     padding-top: 79px;
     padding-bottom: 79px;
-    height: 80vh;
+    height: auto; /* Adjust height to auto for better content fit */
 }
-.container {
+.footer-container {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -237,34 +269,60 @@ select, textarea {
 }
 .row {
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+}
+.footer-about {
+    flex: 1; 
+    padding: 15px;
+}
+.logo-container {
+    transform: translateY(8px);
 }
 .footer-title {
     font-size: 24px;
     font-weight: 300;
     color: white;
+    margin-bottom: 20px; /* Add margin below the title */
 }
-.footer-latest-content{
+.footer-about-text {
+    font-size: 14px; /* Increase font size for better readability */
+    font-weight: 300;
+    line-height: 1.5; /* Adjust line height for better spacing */
+    color: #7d8293;
+    margin-top: 35px;
+}
+.footer-copyright{
+    font-size: 14px; /* Increase font size for better readability */
+    font-weight: 300;
+    line-height: 1.5; /* Adjust line height for better spacing */
+    color: #7d8293;
+    margin-top: 35px;
+}
+.footer-latest {
+    flex: 1; /* Make the latest news section flexible */
+    padding: 15px; /* Add padding for better spacing */
+}
+.footer-latest-content {
     padding: 0;
     margin: 0;
 }
 .footer-latest-item {
     display: flex; /* Use flexbox for alignment */
-    justify-content: center;
-    margin-top: 33px;
-    margin-left: 0;
-    padding-left: 0;
+    justify-content: flex-start;
+    align-items: center; /* Align items vertically */
+    margin-top: 20px; /* Adjust margin for spacing between items */
 }
-.footer_latest_image {
+.footer-latest-image {
     display: inline-block;
     width: 78px;
     height: 78px;
+    overflow: hidden; /* Ensure image fits within container */
 }
 .footer-latest-image img {
-    max-width: 100%;
+    width: 100%;
+    height: auto; /* Adjust height to auto for better image scaling */
 }
 .footer-latest-item-content {
     display: inline-block;
@@ -286,4 +344,37 @@ img {
     font-weight: 300;
     color: #16EFEB;
     margin-top: 10px;
+}
+
+.tags-content {
+    margin-top: 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.ul {
+    list-style: none;
+    margin-bottom: 0px;
+    padding: 0; /* Added padding 0 */
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+.tag {
+    height: 36px;
+    background: rgba(22, 239, 235, 1);
+    margin-right: 6px;
+    margin-bottom: 6px;
+    display: flex; /* Added for flex alignment */
+    align-items: center; /* Center items vertically */
+    padding: 0 10px; /* Added padding for spacing */
+}
+.tag a {
+    text-decoration: none; /* Remove underline from links */
+    color: #080d1d; /* Set link color */
+    font-size: 14px; /* Adjust font size */
 }
