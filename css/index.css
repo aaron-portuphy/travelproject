@@ -140,9 +140,7 @@ body {
     margin-left: auto;
 }
 .col {
-    -ms-flex-preferred-size: 0;
     flex-basis: 0;
-    -ms-flex-positive: 1;
     flex-grow: 1;
     max-width: 100%;
 }
@@ -161,6 +159,23 @@ body {
     color: #7d8293;
     text-transform: uppercase;
     margin-top: 19px;
+}
+.popular-content {
+    width: 100%;
+    margin-top: 82px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Adds spacing between items */
+    justify-content: center; /* Center items horizontally */
+}
+.popular-item {
+    width: calc((100% - 90px) / 4);
+    margin-bottom: 26px;
+}
+.popular-item img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 .form-container{
     display: flex;
